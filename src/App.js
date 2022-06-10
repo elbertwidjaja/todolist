@@ -1,4 +1,4 @@
-import { ChakraProvider, Tfoot } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import Input from "./input";
 import Todo from "./todo";
@@ -21,13 +21,11 @@ function App() {
   }, [toDo, todoComplete]);
 
   function onCheckboxChecked(value, currentId) {
-    console.log(value, "values");
     const copyTodo = [...toDo];
     const copyTodoComplete = [...todoComplete];
     if (value === true) {
       setToDo((prev) => [
         ...prev.filter((value) => {
-          console.log(value, "valueeee");
           return value.id !== currentId;
         })
       ]);

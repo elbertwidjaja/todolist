@@ -10,7 +10,6 @@ function Input(props) {
       <Text fontSize="3xl">To Do List</Text>
       <form
         onSubmit={(e) => {
-          console.log(todo.current.value, "value todo");
           e.preventDefault();
           onEnter(todo.current.value);
         }}

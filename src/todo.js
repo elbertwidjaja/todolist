@@ -4,11 +4,7 @@ import { Text } from "@chakra-ui/react";
 function Todo({ dataComplete, data, onCheckboxChecked, onDelete }) {
   const arr = data.map((num) => {
     return (
-      <ListItem
-        display="flex"
-        alignItems="center"
-        // style={{ backgroundColor: "green" }}
-      >
+      <ListItem display="flex" alignItems="center">
         <Checkbox
           isInvalid
           onChange={(event) => onCheckboxChecked(event.target.checked, num.id)}
