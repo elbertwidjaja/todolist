@@ -1,8 +1,9 @@
 import { Input as BaseInput } from "@chakra-ui/react";
 import { useRef } from "react";
 import { Text } from "@chakra-ui/react";
-function Input(props) {
-  const { onEnter } = props;
+import { useToDo } from "./useToDo";
+function Input() {
+  const { onEnter } = useToDo();
   const todo = useRef();
 
   return (

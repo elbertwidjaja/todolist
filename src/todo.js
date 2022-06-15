@@ -1,7 +1,15 @@
-import { Checkbox, UnorderedList, ListItem, Button, Text } from "@chakra-ui/react";
+import {
+  Checkbox,
+  UnorderedList,
+  ListItem,
+  Button,
+  Text
+} from "@chakra-ui/react";
+import { useToDo } from "./useToDo";
 
-function Todo({ dataComplete, data, onCheckboxChecked, onDelete }) {
-  const arr = data.map((num) => {
+function Todo() {
+  const { todoComplete, toDo, onCheckboxChecked, onDelete } = useToDo();
+  const arr = toDo.map((num) => {
     return (
       <ListItem display="flex" alignItems="center">
         <Checkbox
@@ -21,7 +29,7 @@ function Todo({ dataComplete, data, onCheckboxChecked, onDelete }) {
       </ListItem>
     );
   });
-  const arr2 = dataComplete.map((num) => {
+  const arr2 = todoComplete.map((num) => {
     return (
       <ListItem display="flex" alignItems="center">
         <Checkbox
