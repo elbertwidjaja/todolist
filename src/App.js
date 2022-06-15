@@ -1,8 +1,7 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Container } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import Input from "./input";
 import Todo from "./todo";
-import { Container } from "@chakra-ui/react";
 
 function App() {
   const [toDo, setToDo] = useState(() => {

@@ -1,6 +1,5 @@
-import { Checkbox, UnorderedList, ListItem } from "@chakra-ui/react";
-import { Button } from "@chakra-ui/react";
-import { Text } from "@chakra-ui/react";
+import { Checkbox, UnorderedList, ListItem, Button, Text } from "@chakra-ui/react";
+
 function Todo({ dataComplete, data, onCheckboxChecked, onDelete }) {
   const arr = data.map((num) => {
     return (
